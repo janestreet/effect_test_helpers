@@ -1,0 +1,11 @@
+(library
+ (foreign_stubs
+  (language c)
+  (names effect_test_helpers_stubs))
+ (name effect_test_helpers)
+ (public_name effect_test_helpers)
+ (libraries base expect_test_helpers_base handled_effect)
+ (c_library_flags -Wl,--wrap=caml_alloc_stack
+   -Wl,--wrap=caml_alloc_stack_preemptible)
+ (preprocess
+  (pps ppx_jane)))
