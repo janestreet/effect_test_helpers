@@ -1,0 +1,5 @@
+(library
+ (name effect_test_helpers_test)
+ (libraries base effect_test_helpers expect_test_helpers_base handled_effect)
+ (preprocess
+  (pps ppx_jane)))
